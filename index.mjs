@@ -62,7 +62,14 @@ const matches = ({
 const app = express();
 
 app.get("/search", (req, res) => {
-  return res.json(DecomojiDB.filter((v) => matches(v, req.query)))
+  const result = DecomojiDB.filter((v) => matches(v, req.query))
+
+  // key パラメータがあればその値のみ配列で返す
+  if (req.query.key) {
+    return res.json(result.map(v => v[req.query.key]))
+  } else {
+    return res.json(result)
+  }
 });
 
 app.listen(3000, () => {
