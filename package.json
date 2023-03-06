@@ -4,7 +4,9 @@
   "version": "0.1.0",
   "description": "デコモジ検索API",
   "main": "index.mjs",
-  "scripts": {},
+  "scripts": {
+    "start": "node index.mjs"
+  },
   "author": "",
   "dependencies": {
     "decomoji": "github:decomoji/decomoji",
