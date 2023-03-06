@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "name": "decomoji-api",
+  "version": "0.1.0",
+  "description": "デコモジ検索API",
+  "main": "index.mjs",
+  "scripts": {},
+  "author": "",
+  "dependencies": {
+    "decomoji": "github:decomoji/decomoji",
+    "express": "^4.18.2"
+  }
+}
