@@ -40,22 +40,20 @@ const matches = ({
   // 受け入れ可能なパラメータのいずれかが存在するか
   const isValidParams = queryCategory || queryCreated || queryName || queryUpdated;
 
-  // name パラメータが decomoji.name に正規表現で一致するか、または空文字か、または null か
+  // name パラメータが decomoji.name に正規表現で一致するか、または無効な指定か
   const nameMatches = RegExp(queryName).test(decomojiName) || isFalsyString(queryName);
 
-  // category パラメータが decomoji.category に一致するか、または空文字か、または null か
+  // category パラメータが decomoji.category に一致するか、または無効な指定か
   const categoryMatches = queryCategory === decomojiCategory || isFalsyString(queryCategory);
 
-  // created パラメータが decomoji.created に一致するか、または空文字か、または null か
+  // created パラメータが decomoji.created に一致するか、または無効な指定か
   const createdMatches = queryCreated === decomojiCreated || isFalsyString(queryCreated);
 
-  // 修正バージョンが、表示するバージョンであるか否か、または何も選択されていないか否か
-  const updatedMatches = decomojiUpdated
-    ? queryUpdated === decomojiUpdated || isFalsyString(queryCreated)
-    : false;
+  // updated パラメータが decomoji.updated に一致するか、または無効な指定か
+  const updatedMatches = queryUpdated === decomojiUpdated || isFalsyString(queryUpdated);
 
   return (
-    isValidParams && nameMatches && categoryMatches && (createdMatches || updatedMatches)
+    isValidParams && nameMatches && categoryMatches && createdMatches && updatedMatches
   );
 };
 
