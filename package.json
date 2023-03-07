@@ -5,11 +5,16 @@
   "description": "デコモジ検索API",
   "main": "index.mjs",
   "scripts": {
+    "prepare": "husky install",
     "start": "node index.mjs"
   },
   "author": "",
   "dependencies": {
     "decomoji": "github:decomoji/decomoji",
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "pretty-quick": "^3.1.3"
   }
 }
