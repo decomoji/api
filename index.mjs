@@ -85,7 +85,5 @@ app.get("/search", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(
-    "decomoji-api server started: http://localhost:3000/search?name="
-  );
+  console.log("listening decomoji-api server");
 });
