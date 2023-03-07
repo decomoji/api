@@ -87,3 +87,5 @@ app.get("/search", (req, res) => {
 app.listen(PORT, () => {
   console.log("listening decomoji-api server");
 });
+
+export default app;
