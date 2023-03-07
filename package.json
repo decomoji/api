@@ -3,12 +3,12 @@
   "name": "decomoji-api",
   "version": "0.1.0",
   "description": "デコモジ検索API",
-  "main": "index.mjs",
+  "main": "index.js",
   "scripts": {
     "prepare": "husky install",
-    "start": "node index.mjs"
+    "start": "node index.js"
   },
-  "author": "",
+  "author": "oti",
   "dependencies": {
     "decomoji": "github:decomoji/decomoji",
     "express": "^4.18.2"
